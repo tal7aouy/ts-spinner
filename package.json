@@ -1,0 +1,51 @@
+{
+  "name": "ts-spinner",
+  "description": "A simple, yet beautiful, CLI spinner.",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "clean": "rimraf build",
+    "build": "tsc --skipLibCheck ",
+    "build:watch": "tsc --skipLibCheck --watch",
+    "test": "ts-node test/index.ts",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "bugs": {
+    "url": "https://github.com/tal7aouy/ts-spinner/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Mhammed Talhaouy",
+    "email": "tal7aouy@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tal7aouy/ts-spinner.git"
+  },
+  "keywords": [
+    "cli",
+    "terminal",
+    "spinner",
+    "loading",
+    "tiny",
+    "pretty"
+  ],
+  "dependencies": {
+    "cli-width": "^3.0.0",
+    "cursor-cli": "^1.0.0",
+    "fixed-width-string": "^2.0.0",
+    "kleur": "^4.1.4",
+    "stdin-blocker": "^1.0.0",
+    "ts-node": "^10.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.16",
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
+    "eslint": "^8.12.0",
+    "promise-resolve-timeout": "^1.2.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.5.5"
+  }
+}
